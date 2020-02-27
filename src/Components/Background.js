@@ -1,29 +1,30 @@
-import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Nav = () => {
-    const classes = useStyles()
+  const classes = useStyles();
 
-    return(
-        <div className={classes.container}>
-            <img src="https://colorlib.com/etc/glint/images/logo.png" className={classes.image} />
-        </div>
-    )
-}
+  return (
+    <div className={classes.container}>
+      <div className={classes.black}></div>
+    </div>
+  );
+};
 
 const useStyles = makeStyles(() => ({
-    container:{
-        width:"100%",
-        backgroundColor:"yellow",
-        position:"absolute"
-    },
-    image: {
-        width: '6%',
-        height: '6%',
-        backgroundColor: "red",
-        float:"left",
-        padding: "25px"
-    }
+  container: {
+    width: '100%',
+    position: 'absolute',
+    backgroundImage: 'url(https://colorlib.com/etc/glint/images/hero-bg.jpg)',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    height: '100%'
+  },
+  black: {
+    backgroundColor: 'black',
+    height: '100%',
+    opacity: 0.7
+  }
 }));
 
-export default Nav
+export default Nav;
