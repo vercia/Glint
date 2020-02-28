@@ -18,3 +18,8 @@ code {
   font-size: 25px;
   margin-left: 8%;
 }
+
+
+.MuiPaper-root{
+  width: 20%;
+}
