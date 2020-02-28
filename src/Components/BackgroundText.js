@@ -42,7 +42,7 @@ const useStyles = makeStyles(() => ({
     padding: '35px'
   },
   welcome: {
-    opacity: '.8',
+    opacity: '.7',
     fontSize: '18px',
     textTransform: 'uppercase',
     fontWeight: '700',
@@ -83,7 +83,8 @@ const useStyles = makeStyles(() => ({
     fontSize: '13px',
     color: 'white',
     letterSpacing: '2px',
-    marginLeft: '15px'
+    marginLeft: '15px',
+    fontWeight: 500
   }
 }));
 
