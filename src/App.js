@@ -3,6 +3,7 @@ import './App.css';
 import Background from './Components/Background';
 import Nav from './Components/Nav';
 import BackgroundText from './Components/BackgroundText';
+import About from './Components/About';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Nav />
       <Background />
       <BackgroundText />
+      <About/>
     </div>
   );
 }
