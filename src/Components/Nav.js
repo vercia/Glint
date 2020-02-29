@@ -67,6 +67,7 @@ const Nav = () => {
         <div className={classes.icons}>
           <i class='fab fa-facebook-f'></i>
           <i class='fab fa-twitter'></i>
+          <i class='fab fa-instagram'></i>
         </div>
       </div>
     </div>
@@ -173,10 +174,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     top: '70%',
     fontSize: '18px',
-    width: '20%',
+    width: '30%',
     display: 'flex',
     justifyContent: 'space-around',
-    left: '12%',
+    left: '10%',
     opacity: 0.5
   }
 }));
