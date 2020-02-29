@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Lato', 'Segoe UI', 'Roboto',
+  font-family: -apple-system, BlinkMacSystemFont,montserrat-medium, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,6 @@ code {
   margin-left: 8%;
 }
 
-
-.MuiPaper-root{
+.MuiPaper-root {
   width: 20%;
 }
