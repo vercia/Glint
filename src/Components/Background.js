@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
     backgroundImage: 'url(https://colorlib.com/etc/glint/images/hero-bg.jpg)',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: '100%'
+    height: '110%'
   },
   black: {
     backgroundColor: 'black',
