@@ -25,6 +25,22 @@ const BackgroundText = () => {
           More about us
         </button>
       </div>
+      <div className={classes.icons}>
+        <span className={classes.span}>
+          <i class='fab fa-facebook-f'></i>
+        </span>
+        <span className={classes.span}>
+          <i class='fab fa-twitter'></i>
+        </span>
+        <span className={classes.span}>
+          <i class='fab fa-instagram'></i>
+        </span>
+      </div>
+      <div className={classes.scroll}>
+        <i class='fas fa-chevron-down' style={{ color: "#39b54a", fontSize: "15px"}}/>
+        <p className={classes.scrollText}>SCROLL DOWN</p>
+        <hr className={classes.lineHome}/>
+      </div>
     </div>
   );
 };
@@ -85,6 +101,49 @@ const useStyles = makeStyles(() => ({
     letterSpacing: '2px',
     marginLeft: '15px',
     fontWeight: 500
+  },
+  icons: {
+    width: '8%',
+    display: 'flex',
+    flexDirection: 'column',
+    right: '0%',
+    position: 'absolute',
+    top: '40%'
+  },
+  span: {
+    paddingTop: '7px',
+    color: 'white',
+    fontSize: '14px',
+    marginTop: '15%',
+    marginLeft: '20%',
+    border: '2px solid white',
+    borderRadius: '100%',
+    height: '22px',
+    width: '29px'
+  },
+  scroll: {
+    width: '13%',
+    height: '14%',
+    display: 'flex',
+    position: 'absolute',
+    right: '3%',
+    bottom: '-9%'
+  },
+  scrollText: {
+    color: 'white',
+    fontSize: '12px',
+    display: 'flex',
+    paddingLeft: '8px',
+    letterSpacing: '1px',
+    marginTop: '8%',
+    fontWeight:600
+  },
+  lineHome: {
+    border: '1px solid #39b54a',
+    marginTop: '8%',
+    position: 'relative',
+    height:"90%",
+    marginBottom:"0%"
   }
 }));
 
