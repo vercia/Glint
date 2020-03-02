@@ -52,7 +52,6 @@ const useStyles = makeStyles(() => ({
     height: '100%'
   },
   image: {
-    width: '5%',
     height: '3%',
     float: 'left',
     padding: '35px'
@@ -90,7 +89,6 @@ const useStyles = makeStyles(() => ({
     left: '10%'
   },
   button: {
-    borderRadius: '0px',
     backgroundColor: 'transparent',
     border: '2px solid white',
     width: '35%',
@@ -136,14 +134,14 @@ const useStyles = makeStyles(() => ({
     paddingLeft: '8px',
     letterSpacing: '1px',
     marginTop: '8%',
-    fontWeight:600
+    fontWeight: 600
   },
   lineHome: {
     border: '1px solid #39b54a',
     marginTop: '8%',
     position: 'relative',
-    height:"90%",
-    marginBottom:"0%"
+    height: '92%',
+    marginBottom: '0%'
   }
 }));
 
