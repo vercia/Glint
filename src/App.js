@@ -5,6 +5,8 @@ import Nav from './Components/Nav';
 import BackgroundText from './Components/BackgroundText';
 import About from './Components/About';
 import Services from './Components/Services'
+import Works from './Components/Works'
+import Clients from './Components/Clients'
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <BackgroundText />
       <About/>
       <Services />
+      <Works />
     </div>
   );
 }
