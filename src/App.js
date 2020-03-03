@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 import Background from './Components/Background';
 import Nav from './Components/Nav';
 import BackgroundText from './Components/BackgroundText';
@@ -17,6 +17,7 @@ function App() {
       <About/>
       <Services />
       <Works />
+      <Clients />
     </div>
   );
 }

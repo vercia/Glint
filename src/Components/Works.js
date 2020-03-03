@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Header from './Header';
 
 const Works = () => {
   const classes = useStyles();
@@ -8,11 +9,7 @@ const Works = () => {
     <div className={classes.container}>
       <div className={classes.blackBox}>
         <div className={classes.title}>
-          <p className={classes.hello}>RECENT WORKS</p>
-          <h1 className={classes.headerText}>
-            We love what we do, check out some of our latest works
-          </h1>
-          <hr className={classes.line} />
+          <Header number={2} />
         </div>
       </div>
       <div className={classes.images}>
@@ -63,44 +60,30 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     position: 'relative',
-    top: '24%',
-    height: '18%'
-  },
-  hello: {
-    letterSpacing: '1px',
-    fontWeight: 800,
-    color: '#39b54a'
-  },
-  headerText: {
-    color: 'white',
-    fontSize: '50px',
+    top: '22%',
+    height: '18%',
     width: '55%',
-    margin: 'auto'
-  },
-  line: {
-    width: '36%',
-    border: '0.5px solid white',
-    opacity: 0.05,
-    marginTop: '2%'
+    margin: 'auto',
+    letterSpacing: '2px'
   },
   images: {
     width: '70%',
     margin: 'auto',
     display: 'flex',
-    top:"-22%",
-    position:"relative",
-    height:"185%"
+    top: '-22%',
+    position: 'relative',
+    height: '185%'
   },
   columnOne: {
-    width:"80%",
-    display:"flex",
-    flexDirection:"column"
+    width: '80%',
+    display: 'flex',
+    flexDirection: 'column'
   },
-  columnTwo:{
-    width: "80%",
-    position: "relative",
-    display: "flex",
-    flexDirection: "column"
+  columnTwo: {
+    width: '80%',
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column'
   }
 }));
 

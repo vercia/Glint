@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
+import Header from './Header';
 
 const About = () => {
   const classes = useStyles();
@@ -8,9 +9,7 @@ const About = () => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <p className={classes.hello}>HELLO THERE</p>
-        <h1 className={classes.headerText}>We Are Glint</h1>
-        <hr className={classes.line} />
+        <Header number={0} />
       </div>
       <div className={classes.middle}>
         <p>
@@ -41,7 +40,7 @@ const About = () => {
           <CountUp start={0} end={109} duration={4} className={classes.count} />
           <p>Projects Completed</p>
         </div>
-        <div className={classes.containerStats} style={{borderRight:"none"}}>
+        <div className={classes.containerStats} style={{ borderRight: 'none' }}>
           <CountUp start={0} end={102} duration={4} className={classes.count} />
           <p>Happy Clients</p>
         </div>
@@ -60,23 +59,9 @@ const useStyles = makeStyles(() => ({
   },
   header: {
     position: 'relative',
-    top: '16%',
-    height: '18%'
-  },
-  hello: {
-    letterSpacing: '1px',
-    fontWeight: 800
-  },
-  headerText: {
-    color: 'white',
-    fontSize: '80px',
-    lineHeight: '.1em'
-  },
-  line: {
-    width: '38%',
-    border: '0.5px solid white',
-    opacity: 0.15,
-    marginTop: '4%'
+    top: '10%',
+    height: '20%',
+    letterSpacing: '2px'
   },
   middle: {
     position: 'relative',
@@ -92,21 +77,21 @@ const useStyles = makeStyles(() => ({
     position: 'relative',
     top: '20%',
     display: 'flex',
-    margin:"auto",
-    width:"70%"
+    margin: 'auto',
+    width: '70%'
   },
   containerStats: {
     fontWeight: 700,
-    borderRight: "1px solid rgba(255,255,255,0.2)",
-    width: "25%",
-    margin: "auto",
+    borderRight: '1px solid rgba(255,255,255,0.2)',
+    width: '25%',
+    margin: 'auto'
   },
   count: {
     fontSize: '80px',
-    color: 'white',
+    color: 'white'
   },
   text: {
-    fontSize: '18px',
+    fontSize: '18px'
   }
 }));
 
