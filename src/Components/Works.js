@@ -1,9 +1,35 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
+import Image from './Image';
 
 const Works = () => {
   const classes = useStyles();
+
+  const arrOfImagesOne = [
+    {
+      path:
+        'https://colorlib.com/etc/glint/images/portfolio/lady-shutterbug.jpg'
+    },
+    {
+      path: 'https://colorlib.com/etc/glint/images/portfolio/the-beetle.jpg'
+    },
+    {
+      path: 'https://colorlib.com/etc/glint/images/portfolio/guitarist.jpg'
+    }
+  ];
+
+  const arrOfImagesTwo = [
+    {
+      path: 'https://colorlib.com/etc/glint/images/portfolio/woodcraft.jpg'
+    },
+    {
+      path: 'https://colorlib.com/etc/glint/images/portfolio/grow-green.jpg'
+    },
+    {
+      path: 'https://colorlib.com/etc/glint/images/portfolio/palmeira.jpg'
+    }
+  ];
 
   return (
     <div className={classes.container}>
@@ -14,33 +40,14 @@ const Works = () => {
       </div>
       <div className={classes.images}>
         <div className={classes.columnOne}>
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/lady-shutterbug.jpg'
-            className='pic'
-          />
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/the-beetle.jpg'
-            className='pic'
-          />
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/guitarist.jpg'
-            className='pic'
-          />
+          {arrOfImagesOne.map((item) => {
+            return <Image key={item.path} path={item.path} />;
+          })}
         </div>
         <div className={classes.columnTwo}>
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/woodcraft.jpg'
-            className='pic'
-          />
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/grow-green.jpg'
-            className='pic'
-          />
-
-          <img
-            src='https://colorlib.com/etc/glint/images/portfolio/palmeira.jpg'
-            className='pic'
-          />
+          {arrOfImagesTwo.map((item) => {
+            return <Image key={item.path} path={item.path} />;
+          })}
         </div>
       </div>
     </div>
