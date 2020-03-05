@@ -31,6 +31,17 @@ const arr = [
     borderOfLine: '0.5px solid white',
     widthOfLine: '60%',
     letterSpaceOfTitleOne: '3px'
+  },
+  {
+    titleOne: 'OUR CLIENTS',
+    titleTwo: 'Glint has been honored to partner up with these clients',
+    colorOfTitleOne: '#39b54a',
+    colorOfTitleTwo: 'black',
+    fontSizeOfTitleTwo: '50px',
+    lineOpacity: '0.05',
+    borderOfLine: 'none',
+    widthOfLine: '70%',
+    letterSpaceOfTitleOne: '3px'
   }
 ];
 
