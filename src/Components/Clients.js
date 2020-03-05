@@ -34,18 +34,21 @@ const Clients = () => {
               <img
                 src='https://colorlib.com/etc/glint/images/clients/apple.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/atom.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/blackberry.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
 
@@ -53,30 +56,35 @@ const Clients = () => {
               <img
                 src='https://colorlib.com/etc/glint/images/clients/dropbox.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/envato.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/firefox.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/joomla.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
             <div>
               <img
                 src='https://colorlib.com/etc/glint/images/clients/magento.png'
                 className={classes.image}
+                alt='technology'
               />
             </div>
           </Swiper>
@@ -95,6 +103,7 @@ const Clients = () => {
               <img
                 src='https://colorlib.com/etc/glint/images/avatars/user-01.jpg'
                 className={classes.avatar}
+                alt='avatar'
               />
               <div className={classes.spanText}>
                 <span className={classes.span}>Tim Cook</span>
@@ -111,6 +120,7 @@ const Clients = () => {
               <img
                 src='https://colorlib.com/etc/glint/images/avatars/user-05.jpg'
                 className={classes.avatar}
+                alt='avatar'
               />
               <div className={classes.spanText}>
                 <span className={classes.span}>Sundar Pichai</span>
@@ -127,6 +137,7 @@ const Clients = () => {
               <img
                 src='https://colorlib.com/etc/glint/images/avatars/user-02.jpg'
                 className={classes.avatar}
+                alt='avatar'
               />
               <div className={classes.spanText}>
                 <span className={classes.span}>Satya Nadella</span>

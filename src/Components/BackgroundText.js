@@ -9,6 +9,7 @@ const BackgroundText = () => {
       <img
         src='https://colorlib.com/etc/glint/images/logo.png'
         className={classes.image}
+        alt="logo"
       />
       <div className={classes.textContainer}>
         <p className={classes.welcome}>Welcome to glint</p>
