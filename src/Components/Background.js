@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-const Nav = () => {
+const Background = () => {
   const classes = useStyles();
 
   return (
@@ -27,4 +27,4 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export default Nav;
+export default Background;
