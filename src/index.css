@@ -31,3 +31,22 @@ code {
 .App {
   text-align: center;
 }
+
+.swiper-container {
+  min-height: 290px;
+  max-height: 650px;
+  width: 80vw;
+  left: -19%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #39b54a;
+}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  color:black;
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  color: black;
+}
