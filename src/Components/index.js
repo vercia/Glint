@@ -42,6 +42,16 @@ const arr = [
     borderOfLine: 'none',
     widthOfLine: '70%',
     letterSpaceOfTitleOne: '3px'
+  },
+  {
+    titleOne: 'CONTACT US',
+    titleTwo: 'Reach out for a new project or just say hello',
+    colorOfTitleOne: '#39b54a',
+    colorOfTitleTwo: 'white',
+    fontSizeOfTitleTwo: '50px',
+    lineOpacity: '0.05',
+    borderOfLine: 'none',
+    letterSpaceOfTitleOne: '3px'
   }
 ];
 
