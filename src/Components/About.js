@@ -45,6 +45,7 @@ const About = () => {
           <p>Happy Clients</p>
         </div>
       </div>
+      <div className={classes.line}></div>
     </div>
   );
 };
@@ -92,6 +93,14 @@ const useStyles = makeStyles(() => ({
   },
   text: {
     fontSize: '18px'
+  },
+  line: {
+    width: '2px',
+    height: '12%',
+    backgroundColor: '#fff',
+    position: 'absolute',
+    right: '4.65%',
+    top: 0
   }
 }));
 
