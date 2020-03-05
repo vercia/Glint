@@ -7,6 +7,8 @@ import About from './Components/About';
 import Services from './Components/Services'
 import Works from './Components/Works'
 import Clients from './Components/Clients'
+import BackgroundOfContact from './Components/BackgroundOfContact';
+import Contact from './Components/Contact';
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
       <Nav />
       <Background />
       <BackgroundText />
-      <About/>
+      <About />
       <Services />
       <Works />
       <Clients />
+      <BackgroundOfContact />
+      <Contact />
     </div>
   );
 }
