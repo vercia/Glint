@@ -1,31 +1,36 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const BackgroundText = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='home'>
       <img
         src='https://colorlib.com/etc/glint/images/logo.png'
         className={classes.image}
-        alt="logo"
+        alt='logo'
       />
-      <div className={classes.textContainer}>
-        <p className={classes.welcome}>Welcome to glint</p>
-        <h1 className={classes.text}>
-          We are a creative group of people who design influential brands and
-          digital experiences.
-        </h1>
-      </div>
-      <div className={classes.buttons}>
-        <button className={classes.button} type='submit'>
-          Start a project
-        </button>
-        <button className={classes.button} type='submit'>
-          More about us
-        </button>
-      </div>
+      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <div className={classes.all}>
+          <div className={classes.textContainer}>
+            <p className={classes.welcome}>WELCOME TO GLINT</p>
+            <h1 className={classes.text}>
+              We are a creative group of people who design influential brands
+              and digital experiences.
+            </h1>
+          </div>
+          <div className={classes.buttons}>
+            <button className={classes.button} type='submit'>
+              Start a project
+            </button>
+            <button className={classes.button} type='submit'>
+              More about us
+            </button>
+          </div>
+        </div>
+      </ScrollAnimation>
       <div className={classes.icons}>
         <span className={classes.span}>
           <i class='fab fa-facebook-f'></i>
@@ -38,9 +43,12 @@ const BackgroundText = () => {
         </span>
       </div>
       <div className={classes.scroll}>
-        <i class='fas fa-chevron-down' style={{ color: "#39b54a", fontSize: "15px"}}/>
+        <i
+          class='fas fa-chevron-down'
+          style={{ color: '#39b54a', fontSize: '15px', cursor: "pointer" }}
+        />
         <p className={classes.scrollText}>SCROLL DOWN</p>
-        <hr className={classes.lineHome}/>
+        <hr className={classes.lineHome} />
       </div>
     </div>
   );
@@ -58,48 +66,47 @@ const useStyles = makeStyles(() => ({
     padding: '35px'
   },
   welcome: {
-    opacity: '.7',
+    opacity: '.5',
     fontSize: '18px',
-    textTransform: 'uppercase',
     fontWeight: '700',
-    letterSpacing: '1.5px'
+    letterSpacing: '2px',
+    marginTop: '35%',
+    marginBottom: '-4%'
   },
   textContainer: {
     display: 'flex',
     flexDirection: 'column',
     width: '50%',
     textAlign: 'left',
-    height: '40%',
-    top: '30%',
     left: '6%',
     position: 'relative',
     color: 'white'
   },
   text: {
-    fontSize: '55px',
-    lineHeight: '1.5em',
-    width: '85%',
-    bottom: '12%',
-    position: 'relative'
+    fontSize: '60px',
+    lineHeight: '1.3em',
+    width: '95%',
+    position: 'relative',
+    fontWeight: 600,
+    letterSpacing: '1.5px'
   },
   buttons: {
     position: 'relative',
-    top: '45%',
+    marginTop: '3%',
     width: '40%',
-    height: '10%',
-    left: '10%'
+    left: '11%'
   },
   button: {
     backgroundColor: 'transparent',
     border: '2px solid white',
-    width: '35%',
-    height: '60%',
+    width: '39%',
+    height: '7vh',
     textTransform: 'uppercase',
     fontSize: '13px',
     color: 'white',
     letterSpacing: '2px',
     marginLeft: '15px',
-    fontWeight: 500
+    fontWeight: 600
   },
   icons: {
     width: '8%',
@@ -135,7 +142,8 @@ const useStyles = makeStyles(() => ({
     paddingLeft: '8px',
     letterSpacing: '1px',
     marginTop: '8%',
-    fontWeight: 600
+    fontWeight: 600,
+    cursor:"pointer"
   },
   lineHome: {
     border: '1px solid #39b54a',

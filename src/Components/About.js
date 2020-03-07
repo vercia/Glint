@@ -2,50 +2,81 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
 import Header from './Header';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const About = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      <div className={classes.header}>
-        <Header number={0} />
-      </div>
-      <div className={classes.middle}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt.
-        </p>
-      </div>
-      <div className={classes.stats}>
-        <div className={classes.containerStats}>
-          <CountUp start={0} end={127} duration={4} className={classes.count} />
-          <p className={classes.text}>Awards Received</p>
+    <div className={classes.container} id='about'>
+        <div className={classes.header}>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <Header number={0} />
+        </ScrollAnimation>
         </div>
-        <div className={classes.containerStats}>
+        <div className={classes.middle}>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt.
+          </p>
+        </ScrollAnimation>
+        </div>
+        <div className={classes.stats}>
+          <div className={classes.containerStats}>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
           <CountUp
-            start={0}
-            end={1505}
-            duration={4}
-            className={classes.count}
-          />
-          <p>Cups of Coffee</p>
+              start={0}
+              end={127}
+              duration={8}
+              className={classes.count}
+            />
+            <p className={classes.text}>Awards Received</p>
+            </ScrollAnimation>
+          </div>
+          <div className={classes.containerStats}>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+            <CountUp
+              start={0}
+              end={1505}
+              duration={8}
+              className={classes.count}
+            />
+            <p>Cups of Coffee</p>
+            </ScrollAnimation>
+          </div>
+          <div className={classes.containerStats}>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+            <CountUp
+              start={0}
+              end={109}
+              duration={8}
+              className={classes.count}
+            />
+            <p>Projects Completed</p>
+            </ScrollAnimation>
+          </div>
+          <div
+            className={classes.containerStats}
+            style={{ borderRight: 'none' }}
+          >
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+            <CountUp
+              start={0}
+              end={102}
+              duration={8}
+              className={classes.count}
+            />
+            <p>Happy Clients</p>
+          </ScrollAnimation>
+          </div>
         </div>
-        <div className={classes.containerStats}>
-          <CountUp start={0} end={109} duration={4} className={classes.count} />
-          <p>Projects Completed</p>
-        </div>
-        <div className={classes.containerStats} style={{ borderRight: 'none' }}>
-          <CountUp start={0} end={102} duration={4} className={classes.count} />
-          <p>Happy Clients</p>
-        </div>
-      </div>
-      <div className={classes.line}></div>
+        <div className={classes.line}></div>
     </div>
   );
 };
@@ -60,13 +91,13 @@ const useStyles = makeStyles(() => ({
   },
   header: {
     position: 'relative',
-    top: '10%',
+    top: '12%',
     height: '20%',
     letterSpacing: '2px'
   },
   middle: {
     position: 'relative',
-    top: '16%',
+    top: '12%',
     width: '65%',
     fontSize: '26px',
     lineHeight: '1.5em',
