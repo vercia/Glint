@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import LinkOfNav from './LinkOfNav';
+import useWindowScrollPosition from '@rehooks/window-scroll-position';
 
 const Nav = () => {
   const classes = useStyles();
+  let position = useWindowScrollPosition();
   const [state, setState] = useState({
     right: false
   });
@@ -25,9 +28,16 @@ const Nav = () => {
     setState({ ...state, [side]: open });
   };
 
+  const links = [
+    { path: 'home', title: 'Home' },
+    { path: 'about', title: 'About' },
+    { path: 'services', title: 'Services' },
+    { path: 'works', title: 'Works' },
+    { path: 'clients', title: 'Clients' },
+    { path: 'contact', title: 'Contact' }
+  ];
+
   const sideList = (side) => (
-    // <div className={classes.container}>
-    // <div className={classes.nav}>
     <div
       className={classes.list}
       role='presentation'
@@ -49,12 +59,15 @@ const Nav = () => {
         </div>
         <div className={classes.middle}>
           <ul className={classes.middleList}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Clients</li>
-            <li>Contact</li>
+            {links.map((item) => {
+              return (
+                <LinkOfNav
+                  path={item.path}
+                  title={item.title}
+                  key={item.path}
+                />
+              );
+            })}
           </ul>
         </div>
         <div className={classes.end}>
@@ -71,13 +84,16 @@ const Nav = () => {
         </div>
       </div>
     </div>
-    //  </div>
-    // </div>
   );
 
   return (
     <div>
-      <button className={classes.nav} onClick={toggleDrawer('right', true)}>
+      <button
+        className={
+          position.y > 250 ? classes.navlist : classes.nav
+        }
+        onClick={toggleDrawer('right', true)}
+      >
         <p className={classes.menu}>MENU</p>
         <i class='fas fa-bars'></i>
       </button>
@@ -98,11 +114,23 @@ const useStyles = makeStyles((theme) => ({
     width: '10%',
     display: 'flex',
     justifyContent: 'center',
-    position: 'absolute',
+    position: 'fixed',
     zIndex: 400,
     right: '2%',
     top: '3%',
     backgroundColor: 'transparent',
+    border: 'none',
+    outline: 'none'
+  },
+  navlist:{
+    width: '10%',
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'fixed',
+    zIndex: 400,
+    right: '2%',
+    top: '3%',
+    backgroundColor: 'black',
     border: 'none',
     outline: 'none'
   },
@@ -159,7 +187,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     fontSize: '20px',
     lineHeight: '2em',
-    fontWeight: 500
+    fontWeight: 500,
+    display: 'flex',
+    flexDirection: 'column',
+    cursor: 'pointer'
   },
   end: {
     position: 'absolute',
