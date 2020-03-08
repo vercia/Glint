@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
 import Image from './Image';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Works = () => {
   const classes = useStyles();
@@ -32,21 +33,35 @@ const Works = () => {
   ];
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='works'>
       <div className={classes.blackBox}>
         <div className={classes.title}>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
           <Header number={2} />
+          </ScrollAnimation>
         </div>
       </div>
       <div className={classes.images}>
         <div className={classes.columnOne}>
           {arrOfImagesOne.map((item) => {
-            return <Image key={item.path} path={item.path} />;
+            return (
+              <ScrollAnimation
+                animateIn='fadeInUp'
+                animateOnce={true}
+                duration='2'
+              >
+                <Image key={item.path} path={item.path} />
+              </ScrollAnimation>
+            );
           })}
         </div>
         <div className={classes.columnTwo}>
           {arrOfImagesTwo.map((item) => {
-            return <Image key={item.path} path={item.path} />;
+            return <ScrollAnimation
+              animateIn='fadeInUp'
+              animateOnce={true}
+              duration='2'
+            ><Image key={item.path} path={item.path} /></ScrollAnimation>;
           })}
         </div>
       </div>

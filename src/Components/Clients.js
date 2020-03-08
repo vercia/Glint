@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
 import Swiper from 'react-id-swiper';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Clients = () => {
   const classes = useStyles();
@@ -25,126 +26,132 @@ const Clients = () => {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='clients'>
       <div className={classes.title}>
-        <Header number={3} />
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <Header number={3} />
+        </ScrollAnimation>
         <div className={classes.swipe}>
-          <Swiper {...params}>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/apple.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/atom.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/blackberry.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+            <Swiper {...params}>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/apple.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/atom.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/blackberry.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
 
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/dropbox.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/envato.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/firefox.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/joomla.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-            <div>
-              <img
-                src='https://colorlib.com/etc/glint/images/clients/magento.png'
-                className={classes.image}
-                alt='technology'
-              />
-            </div>
-          </Swiper>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/dropbox.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/envato.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/firefox.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/joomla.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+              <div>
+                <img
+                  src='https://colorlib.com/etc/glint/images/clients/magento.png'
+                  className={classes.image}
+                  alt='technology'
+                />
+              </div>
+            </Swiper>
+          </ScrollAnimation>
         </div>
         <hr className={classes.line} />
         <div className={classes.swipeOne}>
-          <Swiper {...paramsTwo}>
-            <div>
-              <p className={classes.text}>
-                Qui ipsam temporibus quisquam vel. Maiores eos cumque distinctio
-                nam accusantium ipsum. Laudantium quia consequatur molestias
-                delectus culpa facere hic dolores aperiam. Accusantium quos qui
-                praesentium corpori. Excepturi nam cupiditate culpa doloremque
-                deleniti repellat.
-              </p>
-              <img
-                src='https://colorlib.com/etc/glint/images/avatars/user-01.jpg'
-                className={classes.avatar}
-                alt='avatar'
-              />
-              <div className={classes.spanText}>
-                <span className={classes.span}>Tim Cook</span>
-                <span className={classes.spanTwo}>CEO, Apple</span>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+            <Swiper {...paramsTwo}>
+              <div>
+                <p className={classes.text}>
+                  Qui ipsam temporibus quisquam vel. Maiores eos cumque
+                  distinctio nam accusantium ipsum. Laudantium quia consequatur
+                  molestias delectus culpa facere hic dolores aperiam.
+                  Accusantium quos qui praesentium corpori. Excepturi nam
+                  cupiditate culpa doloremque deleniti repellat.
+                </p>
+                <img
+                  src='https://colorlib.com/etc/glint/images/avatars/user-01.jpg'
+                  className={classes.avatar}
+                  alt='avatar'
+                />
+                <div className={classes.spanText}>
+                  <span className={classes.span}>Tim Cook</span>
+                  <span className={classes.spanTwo}>CEO, Apple</span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className={classes.text}>
-                Excepturi nam cupiditate culpa doloremque deleniti repellat.
-                Veniam quos repellat voluptas animi adipisci. Nisi eaque
-                consequatur. Quasi voluptas eius distinctio. Atque eos maxime.
-                Qui ipsam temporibus quisquam vel.
-              </p>
-              <img
-                src='https://colorlib.com/etc/glint/images/avatars/user-05.jpg'
-                className={classes.avatar}
-                alt='avatar'
-              />
-              <div className={classes.spanText}>
-                <span className={classes.span}>Sundar Pichai</span>
-                <span className={classes.spanTwo}>CEO, Google</span>
+              <div>
+                <p className={classes.text}>
+                  Excepturi nam cupiditate culpa doloremque deleniti repellat.
+                  Veniam quos repellat voluptas animi adipisci. Nisi eaque
+                  consequatur. Quasi voluptas eius distinctio. Atque eos maxime.
+                  Qui ipsam temporibus quisquam vel.
+                </p>
+                <img
+                  src='https://colorlib.com/etc/glint/images/avatars/user-05.jpg'
+                  className={classes.avatar}
+                  alt='avatar'
+                />
+                <div className={classes.spanText}>
+                  <span className={classes.span}>Sundar Pichai</span>
+                  <span className={classes.spanTwo}>CEO, Google</span>
+                </div>
               </div>
-            </div>
-            <div>
-              <p className={classes.text}>
-                Repellat dignissimos libero. Qui sed at corrupti expedita
-                voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                Autem eaque officia cum exercitationem sunt voluptatum
-                accusamus. Quasi voluptas eius distinctio.
-              </p>
-              <img
-                src='https://colorlib.com/etc/glint/images/avatars/user-02.jpg'
-                className={classes.avatar}
-                alt='avatar'
-              />
-              <div className={classes.spanText}>
-                <span className={classes.span}>Satya Nadella</span>
-                <span className={classes.spanTwo}>CEO, Microsoft</span>
+              <div>
+                <p className={classes.text}>
+                  Repellat dignissimos libero. Qui sed at corrupti expedita
+                  voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                  Autem eaque officia cum exercitationem sunt voluptatum
+                  accusamus. Quasi voluptas eius distinctio.
+                </p>
+                <img
+                  src='https://colorlib.com/etc/glint/images/avatars/user-02.jpg'
+                  className={classes.avatar}
+                  alt='avatar'
+                />
+                <div className={classes.spanText}>
+                  <span className={classes.span}>Satya Nadella</span>
+                  <span className={classes.spanTwo}>CEO, Microsoft</span>
+                </div>
               </div>
-            </div>
-          </Swiper>
+            </Swiper>
+          </ScrollAnimation>
         </div>
       </div>
       <div className={classes.lineEnd}></div>
@@ -162,8 +169,8 @@ const useStyles = makeStyles(() => ({
   },
   title: {
     position: 'relative',
-    top: '6%',
-    height: '18%',
+    top: '10%',
+    height: '10%',
     zIndex: 500,
     width: '58%',
     margin: 'auto'
@@ -173,9 +180,6 @@ const useStyles = makeStyles(() => ({
     border: '0.5px solid black',
     opacity: 0.07,
     marginTop: '6%'
-  },
-  swipe: {
-    marginTop: '20%'
   },
   image: {
     width: '80%',

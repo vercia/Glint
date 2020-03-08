@@ -52,7 +52,8 @@ const Nav = () => {
               class='fas fa-times'
               onClick={handleDrawerClose}
               style={{
-                fontSize: '18px'
+                fontSize: '18px',
+                cursor:"pointer"
               }}
             ></i>
           </div>

@@ -1,59 +1,64 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Contact = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id='contact'>
       <div className={classes.header}>
-        <Header number={4} />
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <Header number={4} />
+        </ScrollAnimation>
       </div>
-      <div className={classes.contact}>
-        <div className={classes.message}>
-          <p className={classes.textMessage}>SEND US A MESSAGE</p>
-          <form className={classes.form}>
-            <input type='text' placeholder='Your Name' />
-            <input type='text' placeholder='Your Email' />
-            <input type='text' placeholder='Subject' />
-            <textarea type='text' placeholder='Your Message' />
-            <button type='submit' className={classes.button}>
-              SUBMIT
-            </button>
-          </form>
-        </div>
-        <div style={{ backgroundColor: 'rgba(17,17,17,1)' }}>
-          <p className={classes.textInfo}>CONTACT INFO</p>
-          <div className={classes.all}>
-            <div style={{ height: '40%' }}>
-              <p className={classes.title}>Where to Find Us</p>
-              <p className={classes.contactText}>
-                1600 Amphitheatre Parkway Mountain View, CA <br /> 94043 US
-              </p>
+      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='0'>
+        <div className={classes.contact}>
+          <div className={classes.message}>
+            <p className={classes.textMessage}>SEND US A MESSAGE</p>
+            <form className={classes.form}>
+              <input type='text' placeholder='Your Name' />
+              <input type='text' placeholder='Your Email' />
+              <input type='text' placeholder='Subject' />
+              <textarea type='text' placeholder='Your Message' />
+              <button type='submit' className={classes.button}>
+                SUBMIT
+              </button>
+            </form>
+          </div>
+          <div style={{ backgroundColor: 'rgba(17,17,17,1)' }}>
+            <p className={classes.textInfo}>CONTACT INFO</p>
+            <div className={classes.all}>
+              <div style={{ height: '40%' }}>
+                <p className={classes.title}>Where to Find Us</p>
+                <p className={classes.contactText}>
+                  1600 Amphitheatre Parkway Mountain View, CA <br /> 94043 US
+                </p>
+              </div>
+              <div style={{ height: '35%' }}>
+                <p className={classes.title}>Email Us At</p>
+                <p className={classes.contactText}>
+                  contact@glintsite.com info@glintsite.com
+                </p>
+              </div>
+              <div>
+                <p className={classes.title}>Call Us At</p>
+                <p className={classes.contactText}>
+                  Phone: (+63) 555 1212 <br /> Mobile: (+63) 555 0100 <br />{' '}
+                  Fax: (+63) 555 0101
+                </p>
+              </div>
             </div>
-            <div style={{ height: '35%' }}>
-              <p className={classes.title}>Email Us At</p>
-              <p className={classes.contactText}>
-                contact@glintsite.com info@glintsite.com
-              </p>
-            </div>
-            <div>
-              <p className={classes.title}>Call Us At</p>
-              <p className={classes.contactText}>
-                Phone: (+63) 555 1212 <br /> Mobile: (+63) 555 0100 <br /> Fax:
-                (+63) 555 0101
-              </p>
+            <div className={classes.icons}>
+              <i class='fab fa-facebook-f'></i>
+              <i class='fab fa-twitter'></i>
+              <i class='fab fa-instagram'></i>
             </div>
           </div>
-          <div className={classes.icons}>
-            <i class='fab fa-facebook-f'></i>
-            <i class='fab fa-twitter'></i>
-            <i class='fab fa-instagram'></i>
-          </div>
         </div>
-      </div>
-      <div className={classes.line}></div>
+      </ScrollAnimation>
+        <div className={classes.line}></div>
     </div>
   );
 };
@@ -67,7 +72,7 @@ const useStyles = makeStyles(() => ({
   },
   header: {
     position: 'relative',
-    top: '7%',
+    top: '11%',
     height: '20%',
     letterSpacing: '1px',
     width: '62%',
@@ -109,7 +114,7 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     width: '80%',
     padding: '10%',
-    height: '80%',
+    height: '80vh',
     marginTop: '-8%'
   },
   button: {
