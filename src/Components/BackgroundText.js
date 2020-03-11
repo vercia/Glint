@@ -106,7 +106,13 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     letterSpacing: '2px',
     marginLeft: '15px',
-    fontWeight: 600
+    fontWeight: 600,
+    cursor:"pointer",
+    "&:hover":{
+      backgroundColor:"white",
+      color:"black",
+      transitionDuration: "1s"
+    }
   },
   icons: {
     width: '8%',

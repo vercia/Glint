@@ -45,43 +45,51 @@ const Nav = () => {
       onKeyDown={toggleDrawer(side, false)}
     >
       <div className={classes.menuOpen}>
-        <div className={classes.top}>
-          <p className={classes.navigation}>NAVIGATION</p>
-          <div className={classes.close}>
-            <i
-              class='fas fa-times'
-              onClick={handleDrawerClose}
-              style={{
-                fontSize: '18px',
-                cursor:"pointer"
-              }}
-            ></i>
+        <div class='item animated fadeInRight'>
+          <div className={classes.top}>
+            <p className={classes.navigation}>NAVIGATION</p>
+            <div className={classes.close}>
+              <i
+                class='fas fa-times'
+                onClick={handleDrawerClose}
+                style={{
+                  fontSize: '18px',
+                  cursor: 'pointer'
+                }}
+              ></i>
+            </div>
           </div>
-        </div>
-        <div className={classes.middle}>
-          <ul className={classes.middleList}>
-            {links.map((item) => {
-              return (
-                <LinkOfNav
-                  path={item.path}
-                  title={item.title}
-                  key={item.path}
-                />
-              );
-            })}
-          </ul>
-        </div>
-        <div className={classes.end}>
-          <p>
-            Perspiciatis hic praesentium nesciunt. Et neque a dolorum voluptatem
-            porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis
-            neque reprehenderit.
-          </p>
-        </div>
-        <div className={classes.icons}>
-          <i class='fab fa-facebook-f'></i>
-          <i class='fab fa-twitter'></i>
-          <i class='fab fa-instagram'></i>
+          <div className={classes.middle}>
+            <ul className={classes.middleList}>
+              {links.map((item) => {
+                return (
+                  <LinkOfNav
+                    path={item.path}
+                    title={item.title}
+                    key={item.path}
+                  />
+                );
+              })}
+            </ul>
+          </div>
+          <div className={classes.end}>
+            <p>
+              Perspiciatis hic praesentium nesciunt. Et neque a dolorum
+              voluptatem porro iusto sequi veritatis libero enim. Iusto id
+              <br /> suscipit veritatis neque reprehenderit.
+            </p>
+          </div>
+          <div className={classes.icons}>
+            <span className={classes.icon}>
+              <i class='fab fa-facebook-f' />
+            </span>
+            <span className={classes.icon}>
+              <i class='fab fa-twitter' />
+            </span>
+            <span className={classes.icon}>
+              <i class='fab fa-instagram' />
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -90,19 +98,18 @@ const Nav = () => {
   return (
     <div>
       <button
-        className={
-          position.y > 250 ? classes.navlist : classes.nav
-        }
+        className={position.y > 250 ? classes.navlist : classes.nav}
         onClick={toggleDrawer('right', true)}
       >
         <p className={classes.menu}>MENU</p>
-        <i class='fas fa-bars'></i>
+        <i class='fas fa-bars' style={{ cursor: 'pointer' }}></i>
       </button>
       <SwipeableDrawer
         anchor='right'
         open={state.right}
         onClose={toggleDrawer('right', false)}
         onOpen={toggleDrawer('right', true)}
+        transitionDuration={{ enter: 1000, exit: 1000 }}
       >
         {sideList('right')}
       </SwipeableDrawer>
@@ -123,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     border: 'none',
     outline: 'none'
   },
-  navlist:{
+  navlist: {
     width: '10%',
     display: 'flex',
     justifyContent: 'center',
@@ -140,14 +147,14 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '2px',
     color: '#39b54a',
     fontWeight: 600,
+    cursor: 'pointer',
     '&:hover': {
       color: 'white',
       transition: '0.6s'
     }
   },
   list: {
-    backgroundColor: '#0c0c0c',
-    height: '100vh'
+    backgroundColor: '#0c0c0c'
   },
   close: {
     backgroundColor: 'rgba(0,0,0,.3)',
@@ -164,8 +171,8 @@ const useStyles = makeStyles((theme) => ({
     color: '#39b54a',
     position: 'relative',
     fontSize: '12px',
-    fontWeight: 600,
-    letterSpacing: '1px'
+    fontWeight: 700,
+    letterSpacing: '2px'
   },
   top: {
     display: 'flex',
@@ -179,7 +186,7 @@ const useStyles = makeStyles((theme) => ({
   },
   middle: {
     position: 'absolute',
-    height: '30%',
+    height: '40%',
     width: '100%',
     top: '12%'
   },
@@ -187,7 +194,7 @@ const useStyles = makeStyles((theme) => ({
     listStyle: 'none',
     position: 'relative',
     fontSize: '20px',
-    lineHeight: '2em',
+    lineHeight: '2.3em',
     fontWeight: 500,
     display: 'flex',
     flexDirection: 'column',
@@ -195,22 +202,32 @@ const useStyles = makeStyles((theme) => ({
   },
   end: {
     position: 'absolute',
-    top: '50%',
+    top: '53%',
     fontSize: '13px',
     width: '78%',
     right: '10%',
     lineHeight: '1.8em',
-    opacity: 0.5
+    opacity: 0.3
   },
   icons: {
     position: 'absolute',
-    top: '70%',
+    top: '77%',
     fontSize: '18px',
     width: '30%',
     display: 'flex',
     justifyContent: 'space-around',
-    left: '10%',
-    opacity: 0.5
+    left: '10%'
+  },
+  icon:{
+    opacity:0.3,
+    "&:hover":{
+      opacity:1
+    }
+  },
+  animated: {
+    backgroundColor: 'red',
+    height: '20vh',
+    color: 'white'
   }
 }));
 
