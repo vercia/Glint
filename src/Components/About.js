@@ -3,18 +3,21 @@ import { makeStyles } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
 import Header from './Header';
 import ScrollAnimation from 'react-animate-on-scroll';
+import useWindowScrollPosition from '@rehooks/window-scroll-position';
+import { Link } from 'react-scroll';
 
 const About = () => {
   const classes = useStyles();
+  let position = useWindowScrollPosition();
 
   return (
     <div className={classes.container} id='about'>
-        <div className={classes.header}>
+      <div className={classes.header}>
         <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
           <Header number={0} />
         </ScrollAnimation>
-        </div>
-        <div className={classes.middle}>
+      </div>
+      <div className={classes.middle}>
         <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -26,20 +29,20 @@ const About = () => {
             culpa qui officia deserunt.
           </p>
         </ScrollAnimation>
-        </div>
-        <div className={classes.stats}>
-          <div className={classes.containerStats}>
+      </div>
+      <div className={classes.stats}>
+        <div className={classes.containerStats}>
           <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
-          <CountUp
+            <CountUp
               start={0}
               end={127}
               duration={8}
               className={classes.count}
             />
             <p className={classes.text}>Awards Received</p>
-            </ScrollAnimation>
-          </div>
-          <div className={classes.containerStats}>
+          </ScrollAnimation>
+        </div>
+        <div className={classes.containerStats}>
           <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
             <CountUp
               start={0}
@@ -48,9 +51,9 @@ const About = () => {
               className={classes.count}
             />
             <p>Cups of Coffee</p>
-            </ScrollAnimation>
-          </div>
-          <div className={classes.containerStats}>
+          </ScrollAnimation>
+        </div>
+        <div className={classes.containerStats}>
           <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
             <CountUp
               start={0}
@@ -59,12 +62,9 @@ const About = () => {
               className={classes.count}
             />
             <p>Projects Completed</p>
-            </ScrollAnimation>
-          </div>
-          <div
-            className={classes.containerStats}
-            style={{ borderRight: 'none' }}
-          >
+          </ScrollAnimation>
+        </div>
+        <div className={classes.containerStats} style={{ borderRight: 'none' }}>
           <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
             <CountUp
               start={0}
@@ -74,9 +74,30 @@ const About = () => {
             />
             <p>Happy Clients</p>
           </ScrollAnimation>
-          </div>
         </div>
-        <div className={classes.line}></div>
+      </div>
+      <div className={classes.line}></div>
+      <Link
+        activeClass='active'
+        to='home'
+        spy={true}
+        smooth={true}
+        duration={600}
+      >
+        <button
+          className={position.y > 600 ? classes.buttonPosition : classes.button}
+        >
+          <i
+            class='fas fa-arrow-up'
+            style={{
+              fontSize: '18px',
+              margin: 'auto',
+              position: 'relative',
+              opacity: 0.6
+            }}
+          />
+        </button>
+      </Link>
     </div>
   );
 };
@@ -132,6 +153,21 @@ const useStyles = makeStyles(() => ({
     position: 'absolute',
     right: '4.65%',
     top: 0
+  },
+  button: {
+    display: 'none'
+  },
+  buttonPosition: {
+    height: '60px',
+    width: '60px',
+    justifyContent: 'center',
+    position: 'fixed',
+    zIndex: 400,
+    right: '2%',
+    top: '88%',
+    backgroundColor: 'black',
+    border: 'none',
+    outline: 'none'
   }
 }));
 
