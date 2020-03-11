@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-scroll';
 
 const BackgroundText = () => {
   const classes = useStyles();
@@ -45,9 +46,18 @@ const BackgroundText = () => {
       <div className={classes.scroll}>
         <i
           class='fas fa-chevron-down'
-          style={{ color: '#39b54a', fontSize: '15px', cursor: "pointer" }}
+          style={{ color: '#39b54a', fontSize: '15px', cursor: 'pointer' }}
         />
-        <p className={classes.scrollText}>SCROLL DOWN</p>
+        <Link
+          activeClass='active'
+          to="about"
+          spy={true}
+          smooth={true}
+          duration={600}
+          className={classes.scrollText}
+        >
+          SCROLL DOWN
+        </Link>
         <hr className={classes.lineHome} />
       </div>
     </div>
