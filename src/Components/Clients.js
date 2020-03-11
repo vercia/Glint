@@ -184,7 +184,10 @@ const useStyles = makeStyles(() => ({
   image: {
     width: '80%',
     marginTop: '50%',
-    opacity: 0.55
+    opacity: 0.55,
+    "&:hover":{
+      opacity:.9
+    }
   },
   text: {
     fontFamily: 'lora-regular',

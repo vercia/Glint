@@ -13,7 +13,7 @@ const Contact = () => {
           <Header number={4} />
         </ScrollAnimation>
       </div>
-      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='0'>
+      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
         <div className={classes.contact}>
           <div className={classes.message}>
             <p className={classes.textMessage}>SEND US A MESSAGE</p>
@@ -51,14 +51,20 @@ const Contact = () => {
               </div>
             </div>
             <div className={classes.icons}>
-              <i class='fab fa-facebook-f'></i>
-              <i class='fab fa-twitter'></i>
-              <i class='fab fa-instagram'></i>
+              <span className={classes.icon}>
+                <i class='fab fa-facebook-f' />
+              </span>
+              <span className={classes.icon}>
+                <i class='fab fa-twitter' />
+              </span>
+              <span className={classes.icon}>
+                <i class='fab fa-instagram' />
+              </span>
             </div>
           </div>
         </div>
       </ScrollAnimation>
-        <div className={classes.line}></div>
+      <div className={classes.line}></div>
     </div>
   );
 };
@@ -125,7 +131,11 @@ const useStyles = makeStyles(() => ({
     fontSize: '13px',
     letterSpacing: '2px',
     fontWeight: 600,
-    marginTop: '6%'
+    marginTop: '6%',
+    cursor: 'pointer',
+    '&:hover': {
+      opacity: 0.9
+    }
   },
   textInfo: {
     color: 'white',
@@ -153,15 +163,21 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     opacity: 0.3
   },
-  icons:{
-    fontSize:"18px",
-    padding:"25px",
-    marginTop:"26%",
-    textAlign:"left",
-    color:"white",
-    justifyContent:"space-around",
-    display:"flex",
-    width:"30%"
+  icons: {
+    fontSize: '18px',
+    padding: '25px',
+    marginTop: '26%',
+    textAlign: 'left',
+    color: 'white',
+    justifyContent: 'space-around',
+    display: 'flex',
+    width: '30%'
+  },
+  icon: {
+    '&:hover': {
+      color: '#39b54a',
+      cursor:"pointer"
+    }
   }
 }));
 

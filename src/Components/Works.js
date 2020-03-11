@@ -37,7 +37,7 @@ const Works = () => {
       <div className={classes.blackBox}>
         <div className={classes.title}>
           <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
-          <Header number={2} />
+            <Header number={2} />
           </ScrollAnimation>
         </div>
       </div>
@@ -49,19 +49,25 @@ const Works = () => {
                 animateIn='fadeInUp'
                 animateOnce={true}
                 duration='2'
+                style={{ marginTop: -6 }}
               >
-                <Image key={item.path} path={item.path} />
+                  <Image key={item.path} path={item.path} />
               </ScrollAnimation>
             );
           })}
         </div>
         <div className={classes.columnTwo}>
           {arrOfImagesTwo.map((item) => {
-            return <ScrollAnimation
-              animateIn='fadeInUp'
-              animateOnce={true}
-              duration='2'
-            ><Image key={item.path} path={item.path} /></ScrollAnimation>;
+            return (
+              <ScrollAnimation
+                animateIn='fadeInUp'
+                animateOnce={true}
+                duration='2'
+                style={{marginTop:-6}}
+              >
+                <Image key={item.path} path={item.path} />
+              </ScrollAnimation>
+            );
           })}
         </div>
       </div>
@@ -93,8 +99,7 @@ const useStyles = makeStyles(() => ({
     margin: 'auto',
     display: 'flex',
     top: '-22%',
-    position: 'relative',
-    height: '185%'
+    position: 'relative'
   },
   columnOne: {
     width: '80%',
