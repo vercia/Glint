@@ -3,32 +3,37 @@ import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
 import Image from './Image';
 import ScrollAnimation from 'react-animate-on-scroll';
+import grow from './images/grow-green.jpg';
+import guitarist from './images/guitarist.jpg';
+import lady from './images/lady-shutterbug.jpg';
+import palmeira from './images/palmeira.jpg';
+import beetle from './images/the-beetle.jpg';
+import woodcraft from './images/woodcraft.jpg';
 
 const Works = () => {
   const classes = useStyles();
 
   const arrOfImagesOne = [
     {
-      path:
-        'https://colorlib.com/etc/glint/images/portfolio/lady-shutterbug.jpg'
+      path: lady
     },
     {
-      path: 'https://colorlib.com/etc/glint/images/portfolio/the-beetle.jpg'
+      path: beetle
     },
     {
-      path: 'https://colorlib.com/etc/glint/images/portfolio/guitarist.jpg'
+      path: guitarist
     }
   ];
 
   const arrOfImagesTwo = [
     {
-      path: 'https://colorlib.com/etc/glint/images/portfolio/woodcraft.jpg'
+      path: woodcraft
     },
     {
-      path: 'https://colorlib.com/etc/glint/images/portfolio/grow-green.jpg'
+      path: grow
     },
     {
-      path: 'https://colorlib.com/etc/glint/images/portfolio/palmeira.jpg'
+      path: palmeira
     }
   ];
 
@@ -36,7 +41,7 @@ const Works = () => {
     <div className={classes.container} id='works'>
       <div className={classes.blackBox}>
         <div className={classes.title}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <Header number={2} />
           </ScrollAnimation>
         </div>
@@ -48,10 +53,11 @@ const Works = () => {
               <ScrollAnimation
                 animateIn='fadeInUp'
                 animateOnce={true}
-                duration='2'
+                duration={2}
                 style={{ marginTop: -6 }}
+                key={item.path}
               >
-                  <Image key={item.path} path={item.path} />
+                <Image path={item.path} />
               </ScrollAnimation>
             );
           })}
@@ -62,10 +68,11 @@ const Works = () => {
               <ScrollAnimation
                 animateIn='fadeInUp'
                 animateOnce={true}
-                duration='2'
-                style={{marginTop:-6}}
+                duration={2}
+                style={{ marginTop: -6 }}
+                key={item.path}
               >
-                <Image key={item.path} path={item.path} />
+                <Image path={item.path} />
               </ScrollAnimation>
             );
           })}

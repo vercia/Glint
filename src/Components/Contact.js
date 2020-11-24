@@ -9,11 +9,11 @@ const Contact = () => {
   return (
     <div className={classes.container} id='contact'>
       <div className={classes.header}>
-        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
           <Header number={4} />
         </ScrollAnimation>
       </div>
-      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
         <div className={classes.contact}>
           <div className={classes.message}>
             <p className={classes.textMessage}>SEND US A MESSAGE</p>

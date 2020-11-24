@@ -13,12 +13,12 @@ const About = () => {
   return (
     <div className={classes.container} id='about'>
       <div className={classes.header}>
-        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
           <Header number={0} />
         </ScrollAnimation>
       </div>
       <div className={classes.middle}>
-        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -32,7 +32,7 @@ const About = () => {
       </div>
       <div className={classes.stats}>
         <div className={classes.containerStats}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <CountUp
               start={0}
               end={127}
@@ -43,7 +43,7 @@ const About = () => {
           </ScrollAnimation>
         </div>
         <div className={classes.containerStats}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <CountUp
               start={0}
               end={1505}
@@ -54,7 +54,7 @@ const About = () => {
           </ScrollAnimation>
         </div>
         <div className={classes.containerStats}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <CountUp
               start={0}
               end={109}
@@ -65,7 +65,7 @@ const About = () => {
           </ScrollAnimation>
         </div>
         <div className={classes.containerStats} style={{ borderRight: 'none' }}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <CountUp
               start={0}
               end={102}

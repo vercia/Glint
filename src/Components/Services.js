@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <div className={classes.container} id='services'>
       <div className={classes.title}>
-        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
         <Header number={1} />
         </ScrollAnimation>
       </div>
@@ -21,13 +21,13 @@ const Services = () => {
             <ScrollAnimation
               animateIn='fadeInUp'
               animateOnce={true}
-              duration='2'
+              duration={2}
+              key={item.title}
             >
               <Service
                 text={item.text}
                 icon={item.icon}
                 title={item.title}
-                key={item.title}
               />
             </ScrollAnimation>
           );

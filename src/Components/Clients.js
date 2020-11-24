@@ -3,6 +3,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Header from './Header';
 import Swiper from 'react-id-swiper';
 import ScrollAnimation from 'react-animate-on-scroll';
+import apple from './images/apple.png'
+import atom from './images/atom.png';
+import blackberry from './images/blackberry.png';
+import dropbox from './images/dropbox.png';
+import envato from './images/envato.png';
+import firefox from './images/firefox.png';
+import joomla from './images/joomla.png';
+import magento from './images/magento.png';
+import user1 from './images/user-01.jpg'
+import user2 from './images/user-02.jpg';
+import user3 from './images/user-05.jpg';
 
 const Clients = () => {
   const classes = useStyles();
@@ -28,29 +39,29 @@ const Clients = () => {
   return (
     <div className={classes.container} id='clients'>
       <div className={classes.title}>
-        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+        <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
           <Header number={3} />
         </ScrollAnimation>
         <div className={classes.swipe}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <Swiper {...params}>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/apple.png'
+                  src={apple}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/atom.png'
+                  src={atom}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/blackberry.png'
+                  src={blackberry}
                   className={classes.image}
                   alt='technology'
                 />
@@ -58,35 +69,35 @@ const Clients = () => {
 
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/dropbox.png'
+                  src={dropbox}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/envato.png'
+                  src={envato}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/firefox.png'
+                  src={firefox}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/joomla.png'
+                  src={joomla}
                   className={classes.image}
                   alt='technology'
                 />
               </div>
               <div>
                 <img
-                  src='https://colorlib.com/etc/glint/images/clients/magento.png'
+                  src={magento}
                   className={classes.image}
                   alt='technology'
                 />
@@ -96,7 +107,7 @@ const Clients = () => {
         </div>
         <hr className={classes.line} />
         <div className={classes.swipeOne}>
-          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+          <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
             <Swiper {...paramsTwo}>
               <div>
                 <p className={classes.text}>
@@ -107,7 +118,7 @@ const Clients = () => {
                   cupiditate culpa doloremque deleniti repellat.
                 </p>
                 <img
-                  src='https://colorlib.com/etc/glint/images/avatars/user-01.jpg'
+                  src={user1}
                   className={classes.avatar}
                   alt='avatar'
                 />
@@ -124,7 +135,7 @@ const Clients = () => {
                   Qui ipsam temporibus quisquam vel.
                 </p>
                 <img
-                  src='https://colorlib.com/etc/glint/images/avatars/user-05.jpg'
+                  src={user3}
                   className={classes.avatar}
                   alt='avatar'
                 />
@@ -141,7 +152,7 @@ const Clients = () => {
                   accusamus. Quasi voluptas eius distinctio.
                 </p>
                 <img
-                  src='https://colorlib.com/etc/glint/images/avatars/user-02.jpg'
+                  src={user2}
                   className={classes.avatar}
                   alt='avatar'
                 />

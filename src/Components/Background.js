@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import hero from './images/hero.jpg'
 
 const Background = () => {
   const classes = useStyles();
@@ -15,7 +16,7 @@ const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
     position: 'absolute',
-    backgroundImage: 'url(https://colorlib.com/etc/glint/images/hero-bg.jpg)',
+    backgroundImage: `url(${hero})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     height: '110%'

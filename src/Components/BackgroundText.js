@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Link } from 'react-scroll';
+import logo from './images/logo.png'
 
 const BackgroundText = () => {
   const classes = useStyles();
@@ -9,11 +10,11 @@ const BackgroundText = () => {
   return (
     <div className={classes.container} id='home'>
       <img
-        src='https://colorlib.com/etc/glint/images/logo.png'
+        src={logo}
         className={classes.image}
         alt='logo'
       />
-      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration='2'>
+      <ScrollAnimation animateIn='fadeInUp' animateOnce={true} duration={2}>
         <div className={classes.all}>
           <div className={classes.textContainer}>
             <p className={classes.welcome}>WELCOME TO GLINT</p>
@@ -50,7 +51,7 @@ const BackgroundText = () => {
         />
         <Link
           activeClass='active'
-          to="about"
+          to='about'
           spy={true}
           smooth={true}
           duration={600}

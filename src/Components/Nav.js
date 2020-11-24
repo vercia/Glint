@@ -64,9 +64,9 @@ const Nav = () => {
               {links.map((item) => {
                 return (
                   <LinkOfNav
+                    key={item.path}
                     path={item.path}
                     title={item.title}
-                    key={item.path}
                   />
                 );
               })}

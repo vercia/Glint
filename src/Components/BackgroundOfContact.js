@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import bgContact from './images/contact-bg.jpg'
 
 const BackgroundOfContact = () => {
   const classes = useStyles();
@@ -15,8 +16,7 @@ const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
     position: 'absolute',
-    backgroundImage:
-      'url(https://colorlib.com/etc/glint/images/contact-bg.jpg)',
+    backgroundImage: `url(${bgContact})`,
     backgroundPosition: 'center, center',
     backgroundRepeat: 'no-repeat',
     height: '160%',
